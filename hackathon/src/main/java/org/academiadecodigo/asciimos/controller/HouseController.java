@@ -28,7 +28,7 @@ public class HouseController {
     public String listHouses(Model model) {
         //model.addAttribute("", houseService.list());
 
-        return "house/list";
+        return "index.html";
     }
 
     @RequestMapping(method = RequestMethod.POST, path = "/add")
@@ -41,6 +41,6 @@ public class HouseController {
         //House house = houseAssembler.convertToRealHouse(houseDto, new House());
         //houseService.saveOrUpdate(house);
 
-        return "redirect:/customer/";
+        return "index.html";
     }
 }
