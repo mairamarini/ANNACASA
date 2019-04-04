@@ -31,6 +31,12 @@ public class HouseController {
         return "redirect:/view/index.html";
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/addhouse")
+    public String addHouse(Model model) {
+        //model.addAttribute("", houseService.list());
+        return "redirect:/view/house-view.html";
+    }
+
     @RequestMapping(method = RequestMethod.GET, path = "/remove/{id}")
     public String deleteCustomer(@PathVariable Integer id) {
         //houseService.deleteHouse(id);

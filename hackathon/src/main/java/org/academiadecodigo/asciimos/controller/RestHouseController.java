@@ -17,7 +17,7 @@ import javax.validation.Valid;
 
 @CrossOrigin(value = "*")
 @RestController
-@RequestMapping("/api/house/")
+@RequestMapping("/api/house")
 public class RestHouseController {
 
     private HouseAssembler houseAssembler;
@@ -33,6 +33,7 @@ public class RestHouseController {
         this.houseService = houseService;
     }
 
+
     @PostMapping(path = "/")
     public ResponseEntity<?> addHouse(@Valid @RequestBody HouseDto houseDto, BindingResult binding, UriComponentsBuilder builder) {
 
@@ -42,13 +43,13 @@ public class RestHouseController {
 
         House house = houseAssembler.convertToRealHouse(houseDto);
         houseService.addHouse(house);
-
-        UriComponents component = builder.path("/api/cat/" + house.getId()).build();
+/*
+        UriComponents component = builder.path("/api/rrr/" + house.getId()).build();
 
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(component.toUri());
-
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+*/
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
 }

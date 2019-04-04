@@ -13,15 +13,20 @@ public class HouseDto {
     @Size(min = 3, max = 255)
     private String address;
 
+    /*
     @NotNull(message = "Please, tell us how many rooms has your house")
     @NotBlank(message = "Please, tell us how many rooms has your house")
     @Size(min = 3, max = 255)
+    */
     private String rooms;
 
+    /*
     @NotNull(message = "House Type is mandatory")
     @NotBlank(message = "House Type is mandatory")
     @Size(min = 3, max = 255)
+    */
     private String houseType;
+
 
     private Integer budget;
 
