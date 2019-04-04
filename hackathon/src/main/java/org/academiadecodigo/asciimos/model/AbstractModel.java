@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public abstract class AbstractModel {
+public abstract class AbstractModel implements Model{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
