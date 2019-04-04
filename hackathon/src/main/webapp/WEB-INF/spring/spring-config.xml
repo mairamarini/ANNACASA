@@ -5,11 +5,6 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <bean class="org.academiadecodigo.asciimos.Main"/>
-
-    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-        <property name="locations" value="classpath:"/>
-    </bean>
 
     <!-- Use spring servlet for all requests, including static resources -->
     <mvc:default-servlet-handler/>
@@ -19,5 +14,7 @@
 
     <!-- Base package to search for spring beans -->
     <context:component-scan base-package="org.academiadecodigo.asciimos"/>
+
+    <import resource="persistence.xml"/>
 
 </beans>

@@ -17,7 +17,7 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost/rrr?useSSL=false"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/rrr?useSSL=false&amp;serverTimezone=UTC"/>
         <property name="user" value="root"/>
         <property name="password" value=""/>
 
@@ -44,7 +44,7 @@
         </property>
         <property name="jpaProperties">
             <map>
-                <entry key="hibernate.show_sql" value="false" />
+                <entry key="hibernate.show_sql" value="false"/>
                 <entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
                 <!-- Run as create once to initialize the schema -->
                 <entry key="hibernate.hbm2ddl.auto" value="create"/>
