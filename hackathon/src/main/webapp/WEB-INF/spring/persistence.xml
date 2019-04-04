@@ -48,6 +48,12 @@
                 <entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
                 <!-- Run as create once to initialize the schema -->
                 <entry key="hibernate.hbm2ddl.auto" value="create"/>
+
+                <!-- Insert test data if dev.schema.auto property set to create -->
+                <entry key="hibernate.hbm2ddl.import_files" value="populatedb.sql"/>
+                <entry key="hibernate.hbm2ddl.import_files_sql_extractor"
+                       value="org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor"/>
+
             </map>
         </property>
     </bean>
