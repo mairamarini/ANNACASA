@@ -1,5 +1,6 @@
 package org.academiadecodigo.asciimos.controller;
 
+import org.academiadecodigo.asciimos.dto.HouseDto;
 import org.academiadecodigo.asciimos.model.House;
 import org.academiadecodigo.asciimos.service.HouseService;
 import org.springframework.beans.factory.annotation.Autowired;
