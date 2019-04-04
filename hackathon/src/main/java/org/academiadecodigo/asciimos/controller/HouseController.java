@@ -28,7 +28,6 @@ public class HouseController {
     @RequestMapping(method = RequestMethod.GET, path = "/list")
     public String listHouses(Model model) {
         //model.addAttribute("", houseService.list());
-
         return "redirect:/view/index.html";
     }
 
@@ -51,7 +50,5 @@ public class HouseController {
 
         return "index.html";
     }*/
-
-
 
 }
