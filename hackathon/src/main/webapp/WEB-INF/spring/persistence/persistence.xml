@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="emFactory"/>
+    </bean>
+
+    <!-- Enable support for JPA annotations -->
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+
+    <!-- c3p0 database connection pool management -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost/rrr?useSSL=false"/>
+        <property name="user" value="root"/>
+        <property name="password" value=""/>
+
+        <!-- c3p0 database connection pool management properties -->
+        <property name="minPoolSize" value="1"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="acquireIncrement" value="1"/>
+        <property name="maxStatements" value="0"/>
+
+        <!-- destroy idle pool after 300ms -->
+        <property name="idleConnectionTestPeriod" value="300"/>
+
+        <!-- destroy db connection if it fails to login after 7200ms -->
+        <property name="loginTimeout" value="7200"/>
+
+    </bean>
+
+    <bean id="emFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="org.academiadecodigo.asciimos.model"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="jpaProperties">
+            <map>
+                <entry key="hibernate.show_sql" value="false" />
+                <entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+                <!-- Run as create once to initialize the schema -->
+                <entry key="hibernate.hbm2ddl.auto" value="create"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
