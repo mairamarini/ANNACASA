@@ -1,7 +1,9 @@
 package org.academiadecodigo.asciimos.controller;
 
+import org.academiadecodigo.asciimos.dto.HouseDto;
 import org.academiadecodigo.asciimos.model.House;
 import org.academiadecodigo.asciimos.service.HouseService;
+import org.academiadecodigo.asciimos.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,13 +18,19 @@ import javax.validation.Valid;
 
 @RequestMapping("/house")
 @Controller
-public class HouseController {
+public class WebController {
 
     private HouseService houseService;
+    private UserService userService;
 
     @Autowired
     public void setHouseService(HouseService houseService) {
         this.houseService = houseService;
+    }
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/list")
@@ -38,17 +46,13 @@ public class HouseController {
         return "redirect:/view/index.html";
     }
 
-    /*@RequestMapping(method = RequestMethod.POST, path = "/add")
+    @RequestMapping(method = RequestMethod.POST, path = "/add")
     public String addHouse(@Valid @ModelAttribute("house") HouseDto houseDto, BindingResult result) {
-
-        if (result.hasErrors()) {
-            return "index.html";
-        }
 
         //House house = houseAssembler.convertToRealHouse(houseDto, new House());
         //houseService.saveOrUpdate(house);
 
         return "index.html";
-    }*/
+    }
 
 }
