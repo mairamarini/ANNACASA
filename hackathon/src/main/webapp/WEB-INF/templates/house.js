@@ -11,7 +11,7 @@ function addHouse() {
 
     var house = JSON.stringify({
         address: document.getElementById('address').value,
-        type: document.getElementById('type').value,
+        houseType: document.getElementById('houseType').value,
         rooms: document.getElementById('rooms').value,
         budget: document.getElementById('budget').value
     });
