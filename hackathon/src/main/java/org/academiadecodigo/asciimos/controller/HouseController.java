@@ -34,7 +34,7 @@ public class HouseController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/remove/{id}")
-    public String deleteCustomer(@PathVariable Integer id) {
+    public String deleteHouse(@PathVariable Integer id) {
         //houseService.deleteHouse(id);
 
         return "redirect:/view/index.html";
