@@ -1,6 +1,5 @@
 package org.academiadecodigo.asciimos.controller;
 
-import org.academiadecodigo.asciimos.HouseDto;
 import org.academiadecodigo.asciimos.model.House;
 import org.academiadecodigo.asciimos.service.HouseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +39,7 @@ public class HouseController {
         return "redirect:/view/index.html";
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
+    /*@RequestMapping(method = RequestMethod.POST, path = "/add")
     public String addHouse(@Valid @ModelAttribute("house") HouseDto houseDto, BindingResult result) {
 
         if (result.hasErrors()) {
@@ -51,7 +50,7 @@ public class HouseController {
         //houseService.saveOrUpdate(house);
 
         return "index.html";
-    }
+    }*/
 
 
 
