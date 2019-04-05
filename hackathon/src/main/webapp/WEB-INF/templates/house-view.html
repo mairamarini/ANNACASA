@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./house-view.css">
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -14,103 +14,112 @@
 </head>
 <body>
 
-<div class="container">
-    <h2>Add your house</h2>
+<div class="bg">
 
-    <img src="">
 
-</div>
-<div class="container">
-    <form class="ui form">
-        <div class="field">
-            <label>Address</label>
-            <input id="address" type="text" name="address" placeholder="Address">
-        </div>
-        <div class="field">
-            <label>Type</label>
-            <select id="houseType" class="ui fluid dropdown">
-                <option value="">Type</option>
-                <option value="apartment">Apartment</option>
-                <option value="house">House</option>
-            </select>
-        </div>
+    <div class="container">
+        <div class="rect">
+            <div class="loginho">
+                <img src="./logoMIN.png" class="rounded mx-auto d-block" alt="...">
+            </div>
+            <div class="text-form">
+                <div class="text-center" style="padding-top: 10px">
+                    <h2 style="color: gray">Add your house</h2>
+                </div><br>
 
-        <div class="field">
-            <label>Rooms</label>
-            <select id="rooms" class="ui fluid dropdown">
-                <option value="">Rooms</option>
-                <option value="T0">T0</option>
-                <option value="T1">T1</option>
-                <option value="T2">T2</option>
-                <option value="T3">T3</option>
-                <option value="T4">T4</option>
-                <option value="T5+">T5+</option>
-            </select>
-        </div>
-        <div class="field">
-            <label>Budget €</label>
-            <input id="budget" type="text" name="budget" placeholder="Budget to invest">
-        </div>
-
-        <div class="ui form">
-            <div class="inline fields">
-                <label id="work">Services Needed</label>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input value="5" type="checkbox">
-                        <label>Carpentry</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input value="6" type="checkbox">
-                        <label>Decoration</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input value="7" type="checkbox">
-                        <label>Rebuild</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input value="8" type="checkbox">
-                        <label>Electric</label>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input value="4" type="checkbox">
-                        <label>Plumbing</label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui radio checkbox">
-                        <input value="9" type="checkbox">
-                        <label>Cleaning</label>
+                <form class="ui form">
+                    <div class="field">
+                        <label>Address</label>
+                        <input id="address" type="text" name="address" placeholder="Address">
                     </div>
                     <div class="field">
-                        <div class="ui radio checkbox">
-                            <input value="10" type="checkbox">
-                            <label>Locksmith</label>
+                        <label>Type</label>
+                        <select id="houseType" class="ui fluid dropdown">
+                            <option value="">Type</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="house">House</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Rooms</label>
+                        <select id="rooms" class="ui fluid dropdown">
+                            <option value="">Rooms</option>
+                            <option value="T0">T0</option>
+                            <option value="T1">T1</option>
+                            <option value="T2">T2</option>
+                            <option value="T3">T3</option>
+                            <option value="T4">T4</option>
+                            <option value="T5+">T5+</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Budget €</label>
+                        <input id="budget" type="text" name="budget" placeholder="Budget to invest">
+                    </div>
+
+                    <div class="ui form">
+                        <div class="inline fields">
+                            <label id="work"><b>Services Needed</b></label>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input value="5" type="checkbox">
+                                    <label>Carpentry</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input value="6" type="checkbox">
+                                    <label>Decoration</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input value="7" type="checkbox">
+                                    <label>Rebuild</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input value="8" type="checkbox">
+                                    <label>Electric</label>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input value="4" type="checkbox">
+                                    <label>Plumbing</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input value="9" type="checkbox">
+                                    <label>Cleaning</label>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input value="10" type="checkbox">
+                                        <label>Locksmith</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                </form>
+                <button id="btn" class="btn-success" type="submit"
+                        style="background-color: #86cfc6; border-color: #86cfc6">Submit
+                </button>
+                </form>
             </div>
         </div>
 
-    </form>
-    <button id="btn" class="btn-primary" type="submit">Submit</button>
-    </form>
-</div>
+        <div class="container">
+            <footer>
 
-<div class="container">
-    <footer>
-
-    </footer>
-</div>
-</div>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
