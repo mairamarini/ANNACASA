@@ -15,6 +15,7 @@ public class HouseAssembler {
         house.setBudget(houseDto.getBudget());
         house.setRooms(houseDto.getRooms());
         house.setHouseType(houseDto.getHouseType());
+        house.setWork(houseDto.getWork());
 
         return house;
     }

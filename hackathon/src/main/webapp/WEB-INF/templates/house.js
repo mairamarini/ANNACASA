@@ -13,7 +13,8 @@ function addHouse() {
         address: document.getElementById('address').value,
         houseType: document.getElementById('houseType').value,
         rooms: document.getElementById('rooms').value,
-        budget: document.getElementById('budget').value
+        budget: document.getElementById('budget').value,
+        work: document.getElementById('work').value
     });
 
 
