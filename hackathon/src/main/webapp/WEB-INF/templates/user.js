@@ -16,6 +16,8 @@ function addUser() {
         password: document.getElementById('password').value
     });
 
+    document.cookie = document.getElementById('phone').value;
+
     var ajax;
 
     if (window.XMLHttpRequest) {
@@ -29,7 +31,7 @@ function addUser() {
             window.location.replace('http://localhost:8080/rrr/house/addhouse');
         }
     };
-
+    document.cookie = document.getElementById('phone').value;
     // start the AJAX request
     ajax.open('POST', 'http://localhost:8080/rrr/api/user/', true);
     ajax.setRequestHeader('Content-type', 'application/json');

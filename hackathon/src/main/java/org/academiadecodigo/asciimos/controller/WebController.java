@@ -33,6 +33,8 @@ public class WebController {
         this.userService = userService;
     }
 
+
+
     @RequestMapping(method = RequestMethod.GET, path = "/list")
     public String listHouses(Model model) {
         //model.addAttribute("", houseService.list());

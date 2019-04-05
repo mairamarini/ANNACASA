@@ -78,5 +78,12 @@ public class RestUserController {
             return new ResponseEntity<>(HttpStatus.CREATED);
         }
 
+    @PostMapping(path = "/houselist")
+    public ResponseEntity<?> houseslist(@Valid @RequestBody UserDto userDto, BindingResult binding, UriComponentsBuilder builder) {
+
+
+
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 
 }

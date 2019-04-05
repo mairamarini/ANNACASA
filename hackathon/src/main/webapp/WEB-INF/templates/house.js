@@ -1,11 +1,27 @@
 window.onload = function () {
 
-
+checkCookie();
     var submitButton = document.getElementById('btn');
     submitButton.addEventListener("click", addHouse, false);
 
 
 };
+
+function checkCookie() {
+    var phone = getCookie("phone");
+    if (phone != undefined) {
+        alert("Welcome again " + phone);
+    } else {
+        window.location.replace('http://localhost:8080/rrr/house/login/');
+        }
+
+}
+
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
 
 function addHouse() {
 
@@ -42,7 +58,7 @@ function addHouse() {
 
         if (ajax.readyState === 4 && ajax.status === 201) {
             // what to do after creating
-            var createdHouse = JSON.parse(ajax.responseText); //LIXO
+            window.location.replace('http://localhost:8080/rrr/house/companies/');
 
             get(createdHouse);
         }
@@ -77,7 +93,7 @@ function get(house) {
     }
 */
 
-    window.location.replace('http://localhost:8080/rrr/house/companies');
+
     /*ajax.open('GET','http://localhost:8080/rrr/api/house/filtered?' + idsString, true);
     ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send(); */
