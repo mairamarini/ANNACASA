@@ -1,10 +1,12 @@
 package org.academiadecodigo.asciimos.dto;
 
 import org.academiadecodigo.asciimos.model.User;
+import org.academiadecodigo.asciimos.model.Work;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 public class HouseDto {
 
@@ -16,22 +18,13 @@ public class HouseDto {
     @Size(min = 3, max = 255)
     private String address;
 
-    /*
-    @NotNull(message = "Please, tell us how many rooms has your house")
-    @NotBlank(message = "Please, tell us how many rooms has your house")
-    @Size(min = 3, max = 255)
-    */
     private String rooms;
 
-    /*
-    @NotNull(message = "House Type is mandatory")
-    @NotBlank(message = "House Type is mandatory")
-    @Size(min = 3, max = 255)
-    */
     private String houseType;
 
-
     private Integer budget;
+
+    private Set<Work> work;
 
     public Integer getId() {
         return id;
@@ -79,5 +72,13 @@ public class HouseDto {
 
     public void setBudget(Integer budget) {
         this.budget = budget;
+    }
+
+    public Set<Work> getWork() {
+        return work;
+    }
+
+    public void setWork(Set<Work> work) {
+        this.work = work;
     }
 }

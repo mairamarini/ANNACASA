@@ -1,12 +1,11 @@
 package org.academiadecodigo.asciimos.model;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "house")
-public class House extends AbstractModel{
+public class House extends AbstractModel {
 
     private String address;
     private String rooms;
@@ -15,6 +14,9 @@ public class House extends AbstractModel{
 
     @ManyToOne
     private User user;
+
+    @ManyToMany(mappedBy = "houses", fetch = FetchType.EAGER)
+    private Set<Work> work;
 
     public String getAddress() {
         return address;
@@ -54,5 +56,13 @@ public class House extends AbstractModel{
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Set<Work> getWork() {
+        return work;
+    }
+
+    public void setWork(Set<Work> work) {
+        this.work = work;
     }
 }
