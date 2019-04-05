@@ -28,7 +28,7 @@ function addHouse() {
 
         if (ajax.readyState === 4 && ajax.status === 201) {
             // what to do after creating
-
+            window.location.replace('http://localhost:8080/rrr/house/companies');
         }
     };
 
@@ -37,5 +37,7 @@ function addHouse() {
     ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send(house);
 
+
 }
+
 
