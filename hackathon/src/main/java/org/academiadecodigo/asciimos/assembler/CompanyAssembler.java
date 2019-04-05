@@ -13,6 +13,7 @@ public class CompanyAssembler {
         companyDto.setName(company.getName());
         companyDto.setEmail(company.getEmail());
         companyDto.setPhone(company.getPhone());
+        companyDto.setWorkId(company.getWork().getId());
 
         return companyDto;
     }

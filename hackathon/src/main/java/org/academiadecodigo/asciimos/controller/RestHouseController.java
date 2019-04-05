@@ -75,7 +75,7 @@ public class RestHouseController {
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(component.toUri());
 */
-        return new ResponseEntity<>(houseDto, HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping(path = "/filtered")
