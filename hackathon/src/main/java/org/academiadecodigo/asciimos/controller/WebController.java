@@ -57,6 +57,11 @@ public class WebController {
         return "redirect:/view/add-user.html";
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/")
+    public String homepage() {
+        return "redirect:/view/homepage.html";
+    }
+
     @RequestMapping(method = RequestMethod.GET, path = "/remove/{id}")
     public String deleteHouse(@PathVariable Integer id) {
         //houseService.deleteHouse(id);

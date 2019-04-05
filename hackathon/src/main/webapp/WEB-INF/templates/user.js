@@ -15,7 +15,6 @@ function addUser() {
         phone: document.getElementById('phone').value
     });
 
-
     var ajax;
 
     if (window.XMLHttpRequest) {
