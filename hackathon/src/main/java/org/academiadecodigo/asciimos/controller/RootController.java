@@ -10,7 +10,7 @@ public class RootController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/")
     public String get() {
-        return "redirect:/view/index.html";
+        return "redirect:/house/";
     }
 
 }

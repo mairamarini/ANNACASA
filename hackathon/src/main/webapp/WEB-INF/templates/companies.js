@@ -1,4 +1,9 @@
 window.onload = function () {
+    if (!window.localStorage.getItem('userPhone')) {
+        window.location.replace('http://localhost:8080/rrr/house/login')
+        return
+    }
+
     var ajax = new XMLHttpRequest();
 
     var wantedIds = JSON.parse(window.localStorage.getItem('works'));
@@ -26,9 +31,9 @@ window.onload = function () {
             for (var i = 0; i < companiesToShow.length; i++) {
                 var row = table.insertRow();
 
-                row.insertCell(0).innerText = companiesData[i].name;
-                row.insertCell(1).innerText = companiesData[i].email;
-                row.insertCell(2).innerText = companiesData[i].phone;
+                row.insertCell(0).innerText = companiesToShow[i].name;
+                row.insertCell(1).innerText = companiesToShow[i].email;
+                row.insertCell(2).innerText = companiesToShow[i].phone;
             }
 
             sessionStorage.removeItem('works')

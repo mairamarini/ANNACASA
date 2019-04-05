@@ -11,7 +11,7 @@ INSERT INTO work(id, workType) VALUES
   (1, 'carpentry'),
   (2, 'decoration'),
   (3, 'rebuild'),
-  (4, 'pumbling'),
+  (4, 'plumbing'),
   (5, 'electrical'),
   (6, 'cleaning'),
   (7, 'locksmith');

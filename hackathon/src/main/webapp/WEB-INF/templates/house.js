@@ -1,6 +1,9 @@
 window.onload = function () {
 
-
+    if (!window.localStorage.getItem('userPhone')) {
+        window.location.replace('http://localhost:8080/rrr/house/login')
+        return
+    }
     var submitButton = document.getElementById('btn');
     submitButton.addEventListener("click", addHouse, false);
 

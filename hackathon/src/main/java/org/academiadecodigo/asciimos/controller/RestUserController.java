@@ -60,10 +60,12 @@ public class RestUserController {
 
 
         if (!userService.auth(userDto.getPhone(), userDto.getPassword())) {
+
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
-
         }
+
+
 
        /* if (userService.getUser(userAssembler.convertToRealUser(userDto).getId()) == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -75,12 +77,11 @@ public class RestUserController {
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(component.toUri());
 */
-            return new ResponseEntity<>(HttpStatus.CREATED);
-        }
+        return new ResponseEntity<>(userDto.getPhone(), HttpStatus.OK);
+    }
 
     @PostMapping(path = "/houselist")
     public ResponseEntity<?> houseslist(@Valid @RequestBody UserDto userDto, BindingResult binding, UriComponentsBuilder builder) {
-
 
 
         return new ResponseEntity<>(HttpStatus.CREATED);
