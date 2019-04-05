@@ -62,9 +62,9 @@ public class RestHouseController {
     @PostMapping(path = "/")
     public ResponseEntity<?> addHouse(/*@PathVariable("id") Integer id, */@Valid @RequestBody HouseDto houseDto, BindingResult binding, UriComponentsBuilder builder) {
 
-        if (binding.hasErrors()) {
+        /*if (binding.hasErrors()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+        }*/
 
         House house = houseAssembler.convertToRealHouse(houseDto);
         //house.setUser(userService.getUser(id));

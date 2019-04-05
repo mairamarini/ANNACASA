@@ -18,7 +18,6 @@ window.onload = function () {
                 row.insertCell(0).innerText = companiesData[i].name;
                 row.insertCell(1).innerText = companiesData[i].email;
                 row.insertCell(2).innerText = companiesData[i].phone;
-                row.insertCell(3).innerHTML = '<button type="button" class="btn btn-success">View</button>';
             }
         }
     };
