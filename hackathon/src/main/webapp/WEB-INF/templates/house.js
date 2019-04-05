@@ -52,7 +52,8 @@ function addHouse() {
     ajax.open('POST', 'http://localhost:8080/rrr/api/house/', true);
     ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send(house);
-
+    event.preventDefault();
+    event.stopPropagation();
 
 }
 
