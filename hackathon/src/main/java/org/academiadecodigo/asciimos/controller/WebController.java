@@ -39,6 +39,12 @@ public class WebController {
         return "redirect:/view/index.html";
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/login")
+    public String login(){
+
+        return "redirect:/view/login.html";
+    }
+
     @RequestMapping(method = RequestMethod.GET, path = "/companies")
     public String listCompanies(Model model) {
         //model.addAttribute("", houseService.list());

@@ -31,9 +31,23 @@ public class UserService {
         return user.getHouses();
     }
 
+
+
     @Transactional
     public User addUser(User user) {
         return userDao.saveOrUpdate(user);
     }
 
+    @Transactional
+    public Boolean auth(String phone, String password) {
+        List<User> users = userDao.findAll();
+
+        for (User user : users) {
+            if (user.getPassword().equals(password) && user.getPhone().equals(phone)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

@@ -11,6 +11,7 @@ public class User extends AbstractModel {
     private String name;
     private String phone;
     private String email;
+    private String password;
     //password
 
     @OneToMany(
@@ -59,5 +60,24 @@ public class User extends AbstractModel {
 
     public void setHouses(List<House> houses) {
         this.houses = houses;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", houses=" + houses +
+                '}';
     }
 }

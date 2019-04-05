@@ -6,10 +6,17 @@ public class UserDto {
 
     private Integer id;
 
+    /*
     @NotNull(message = "Name is mandatory")
     @NotBlank(message = "Name is mandatory")
     @Size(min = 3, max = 255)
+    */
     private String name;
+
+    @NotNull(message = "Password is mandatory")
+    @NotBlank(message = "Password is mandatory")
+    @Size(min = 6, max = 255)
+    private String password;
 
     @NotNull(message = "Please, insert your phone number" )
     @NotBlank(message = "Please, insert your phone number")
@@ -17,7 +24,7 @@ public class UserDto {
     @Size(min = 9, max = 16)
     private String phone;
 
-    @Email
+    //@Email
     private String email;
 
     public Integer getId() {
@@ -50,5 +57,24 @@ public class UserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

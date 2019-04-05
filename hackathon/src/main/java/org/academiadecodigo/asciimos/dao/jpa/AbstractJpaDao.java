@@ -49,4 +49,6 @@ public abstract class AbstractJpaDao<T extends Model> implements Dao<T> {
     public void delete(Integer id) {
         em.remove(em.find(modelType, id));
     }
+
+
 }
