@@ -1,5 +1,7 @@
 package org.academiadecodigo.asciimos.dto;
 
+import org.academiadecodigo.asciimos.model.User;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -7,6 +9,7 @@ import javax.validation.constraints.Size;
 public class HouseDto {
 
     private Integer id;
+    private User user;
 
     @NotNull(message = "Address is mandatory")
     @NotBlank(message = "Address is mandatory")
@@ -36,6 +39,14 @@ public class HouseDto {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getAddress() {
