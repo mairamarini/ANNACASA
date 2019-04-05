@@ -18,6 +18,6 @@ body, html {
 .rect {
     background-color: aliceblue;
     opacity: 0.6;
-    margin: 100px 500px 500px 400px;
+    margin: 800px 500px 500px 800px;
     height: 500px;
 }
