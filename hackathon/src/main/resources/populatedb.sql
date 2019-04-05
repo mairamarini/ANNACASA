@@ -1,6 +1,6 @@
 DELETE FROM user;
-INSERT INTO user(id, name, phone, email) VALUES
-  (1, 'Rui Fiono', '989898989','fiono@gmail.com');
+INSERT INTO user(id, name, phone, email, password) VALUES
+  (1, 'Rui Fiono', '989898989','fiono@gmail.com', 'password123');
 
 DELETE FROM house;
 INSERT INTO house(id, address, budget, houseType, rooms, user_id) VALUES

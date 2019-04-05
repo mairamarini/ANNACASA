@@ -9,12 +9,12 @@ window.onload = function () {
 
 function addUser() {
 
-    var house = JSON.stringify({
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
+    var user = JSON.stringify({
         phone: document.getElementById('phone').value,
         password: document.getElementById('password').value
+
     });
+
 
     var ajax;
 
@@ -23,15 +23,19 @@ function addUser() {
     }
 
     ajax.onreadystatechange = function () {
-
         if (ajax.readyState === 4 && ajax.status === 201) {
-            // what to do after creating
-            window.location.replace('http://localhost:8080/rrr/house/addhouse');
+            next();
         }
     };
 
     // start the AJAX request
-    ajax.open('POST', 'http://localhost:8080/rrr/api/user/', true);
+    ajax.open('POST', 'http://localhost:8080/rrr/api/user/login', true);
     ajax.setRequestHeader('Content-type', 'application/json');
-    ajax.send(house);
+    ajax.send(user);
+}
+
+function next() {
+
+    window.location.replace('http://localhost:8080/rrr/house/a')
+
 }

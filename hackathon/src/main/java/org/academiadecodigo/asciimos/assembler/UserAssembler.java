@@ -13,6 +13,7 @@ public class UserAssembler {
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPhone(userDto.getPhone());
+        user.setPassword(userDto.getPassword());
 
         return user;
     }

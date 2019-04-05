@@ -50,4 +50,33 @@ public class RestUserController {
 */
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+
+    @PostMapping(path = "/login")
+    public ResponseEntity<?> loginUser(@Valid @RequestBody UserDto userDto, BindingResult binding, UriComponentsBuilder builder) {
+
+        System.out.println(userDto.getPassword());
+        System.out.println(userDto.getPhone());
+
+
+        if (!userService.auth(userDto.getPhone(), userDto.getPassword())) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+
+        }
+
+       /* if (userService.getUser(userAssembler.convertToRealUser(userDto).getId()) == null){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }*/
+
+/*
+        UriComponents component = builder.path("/api/rrr/" + house.getId()).build();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(component.toUri());
+*/
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        }
+
+
 }
