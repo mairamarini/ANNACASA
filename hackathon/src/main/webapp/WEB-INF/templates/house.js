@@ -1,31 +1,15 @@
 window.onload = function () {
 
-checkCookie();
+
     var submitButton = document.getElementById('btn');
     submitButton.addEventListener("click", addHouse, false);
 
 
 };
 
-function checkCookie() {
-    var phone = getCookie("phone");
-    if (phone != undefined) {
-        alert("Welcome again " + phone);
-    } else {
-        window.location.replace('http://localhost:8080/rrr/house/login/');
-        }
-
-}
-
-function getCookie(name) {
-    var value = "; " + document.cookie;
-    var parts = value.split("; " + name + "=");
-    if (parts.length == 2) return parts.pop().split(";").shift();
-}
-
 function addHouse() {
 
-    var house = JSON.stringify({
+    var house = {
         address: document.getElementById('address').value,
         houseType: document.getElementById('houseType').value,
         rooms: document.getElementById('rooms').value,
@@ -39,14 +23,13 @@ function addHouse() {
             document.getElementById('cleaning'),
             document.getElementById('locksmith')
         ].filter(function (button) {
-            console.log(button)
             return button.checked;
         }).map(function (button) {
             return button.value;
         })
-    });
+    };
 
-    console.log(house);
+    console.log('HOUSE', house);
 
     var ajax;
 
@@ -58,45 +41,22 @@ function addHouse() {
 
         if (ajax.readyState === 4 && ajax.status === 201) {
             // what to do after creating
-            window.location.replace('http://localhost:8080/rrr/house/companies/');
-
-            get(createdHouse);
+            console.log('CB HOUSE', house);
+            console.log(house.work);
+            window.localStorage.setItem('works', JSON.stringify(house.work));
+            console.log(window.localStorage);
+            window.location.replace('http://localhost:8080/rrr/house/companies');
         }
     };
 
     // start the AJAX request
     ajax.open('POST', 'http://localhost:8080/rrr/api/house/', true);
     ajax.setRequestHeader('Content-type', 'application/json');
-    ajax.send(house);
-
-
+    ajax.send(JSON.stringify(house));
+    event.preventDefault();
+    event.stopPropagation();
 }
 
-function get(house) {
-    console.log(house);
 
-   // var idsArray = house.work; //array ids
-    sessionStorage.setItem('workIds', house.work);
-    /*
-    var ids = [];
-
-    idsArray.forEach(function (id) {
-       ids.push('id=' + id);
-    });
-
-    var idsString = ids.join('&');
-
-    var ajax;
-
-    if (window.XMLHttpRequest) {
-        ajax = new XMLHttpRequest();
-    }
-*/
-
-
-    /*ajax.open('GET','http://localhost:8080/rrr/api/house/filtered?' + idsString, true);
-    ajax.setRequestHeader('Content-type', 'application/json');
-    ajax.send(); */
-}
 
 

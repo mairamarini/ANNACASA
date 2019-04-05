@@ -7,7 +7,7 @@ window.onload = function () {
 
 };
 
-function addUser() {
+function addUser(event) {
 
     var house = JSON.stringify({
         name: document.getElementById('name').value,
@@ -29,6 +29,7 @@ function addUser() {
         if (ajax.readyState === 4 && ajax.status === 201) {
             // what to do after creating
             window.location.replace('http://localhost:8080/rrr/house/addhouse');
+
         }
     };
     document.cookie = document.getElementById('phone').value;
@@ -36,4 +37,8 @@ function addUser() {
     ajax.open('POST', 'http://localhost:8080/rrr/api/user/', true);
     ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send(house);
+    event.preventDefault();
+    event.stopPropagation();
+
 }
+

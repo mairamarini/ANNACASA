@@ -1,6 +1,8 @@
 package org.academiadecodigo.asciimos.dto;
 
 import javax.validation.constraints.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CompanyDto {
 
@@ -19,6 +21,8 @@ public class CompanyDto {
     @Pattern(regexp = "^\\+?[0-9]*$", message = "phone number contains invalid characters")
     @Size(min = 9, max = 16)
     private String phone;
+
+    private Integer workId;
 
     public Integer getId() {
         return id;
@@ -50,6 +54,14 @@ public class CompanyDto {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Integer getWorkId() {
+        return workId;
+    }
+
+    public void setWorkId(Integer workId) {
+        this.workId = workId;
     }
 }
 

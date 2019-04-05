@@ -9,10 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="login.js"></script>
-    <title>Register user</title>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./login.css">
 </head>
 <body>
 
+<div class="bg">
+
+
+    <div class="container">
+        <div class="rect">
+            <div class="loginho">
+                <img src="./logoMIN.png" class="rounded mx-auto d-block" alt="...">
+            </div>
+            <div class="text-form">
+                <div class="text-center" style="padding-top: 40px">
+                    <h2 style="color: gray"><b>Login</b></h2>
+                </div>
+                <br>
 <div class="wrapper fadeInDown">
     <div id="formContent">
         <!-- Tabs Titles -->
@@ -23,9 +37,14 @@
         <!-- Login Form -->
         <form>
             <input type="text" id="phone" class="fadeIn second" placeholder="login">
-            <input type="password" id="password" class="fadeIn third" placeholder="password">
-
-            <button id="btn" class="fadeIn fourth">Log In</button>
+            <input type="password" id="password" class="fadeIn third" placeholder="password"><br>
+            <br>
+            <div class="buttonZITO">
+                <input class="btn-success" type="reset"
+                       style="background-color: #f48d8a; border-color: #f48d8a" type="Reset">
+                <button id="btn" class="btn-success" type="submit"
+                        style="background-color: #86cfc6; border-color: #86cfc6">Submit
+                </button>
         </form>
 
         <!-- Remind Passowrd -->
