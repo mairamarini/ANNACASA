@@ -13,3 +13,7 @@ INSERT INTO work(id, workType) VALUES
 DELETE FROM company;
 INSERT INTO company(id, email, name, phone, work_id) VALUES
   (3, 'canalizacao@sapo.pt', 'Saúl Canalizador', '912345678', 4);
+
+DELETE FROM work_house;
+INSERT INTO work_house(work_id, houses_id) VALUES
+(4, 2);
