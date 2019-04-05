@@ -6,7 +6,9 @@ window.onload = function () {
 
         if (ajax.readyState === 4 && ajax.status === 200) {
 
+            var wantedIds = sessionStorage.getItem('workIds');
             var companiesData = JSON.parse(ajax.responseText);
+
             console.log(companiesData);
             var table = document.getElementById('companies-table');
 
