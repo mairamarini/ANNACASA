@@ -44,4 +44,5 @@ public class RestCompanyController {
 
         return new ResponseEntity<>(companyDtos, HttpStatus.OK);
     }
+
 }

@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("./bg.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rect {
+    background-color: aliceblue;
+    opacity: 0.6;
+    margin: 100px 500px 500px 400px;
+    height: 500px;
+}
+
+

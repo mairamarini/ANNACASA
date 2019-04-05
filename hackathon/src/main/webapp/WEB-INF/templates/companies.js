@@ -1,4 +1,4 @@
-window.onload = function () {
+wt add .indow.onload = function () {
     var ajax = new XMLHttpRequest();
 
     // run this when the ajax request completes
@@ -6,7 +6,9 @@ window.onload = function () {
 
         if (ajax.readyState === 4 && ajax.status === 200) {
 
+            var wantedIds = sessionStorage.getItem('workIds');
             var companiesData = JSON.parse(ajax.responseText);
+
             console.log(companiesData);
             var table = document.getElementById('companies-table');
 

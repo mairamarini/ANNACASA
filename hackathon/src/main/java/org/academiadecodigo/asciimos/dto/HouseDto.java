@@ -6,6 +6,8 @@ import org.academiadecodigo.asciimos.model.Work;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class HouseDto {
@@ -24,7 +26,7 @@ public class HouseDto {
 
     private Integer budget;
 
-    private Set<Work> work;
+    private List<Integer> work = new ArrayList<>();
 
     public Integer getId() {
         return id;
@@ -74,11 +76,11 @@ public class HouseDto {
         this.budget = budget;
     }
 
-    public Set<Work> getWork() {
+    public List<Integer> getWork() {
         return work;
     }
 
-    public void setWork(Set<Work> work) {
+    public void setWork(List<Integer> work) {
         this.work = work;
     }
 }

@@ -16,7 +16,6 @@ function addUser() {
         password: document.getElementById('password').value
     });
 
-
     var ajax;
 
     if (window.XMLHttpRequest) {

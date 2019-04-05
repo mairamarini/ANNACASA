@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("./bg.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rect {
+    background-color: aliceblue;
+    opacity: 0.6;
+    margin: 90px 500px 50px 380px;
+    height: 480px;
+    width: 400px;
+    position: absolute;
+}
+
+.text-form{
+
+    text-align: center;
+
+}
+
+.loginho{
+
+    align-content: center;
+    margin-top: 50px;
+}

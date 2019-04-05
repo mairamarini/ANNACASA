@@ -39,21 +39,16 @@ public class WebController {
         return "redirect:/view/index.html";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/login")
-    public String login(){
-
-        return "redirect:/view/login.html";
-    }
-
-    @RequestMapping(method = RequestMethod.GET, path = "/companies")
-    public String listCompanies(Model model) {
+    @RequestMapping(method = RequestMethod.GET, path = {"/companies"})
+    public String listCompanies() {
         //model.addAttribute("", houseService.list());
         return "redirect:/view/companies-view.html";
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/addhouse")
-    public String addHouse(Model model) {
+    public String addHouse() {
         //model.addAttribute("", houseService.list());
+
         return "redirect:/view/house-view.html";
     }
 
@@ -63,20 +58,16 @@ public class WebController {
         return "redirect:/view/add-user.html";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/remove/{id}")
+    @RequestMapping(method = RequestMethod.GET, path = "/")
+    public String homepage() {
+        return "redirect:/view/homepage.html";
+    }
+
+    /*@RequestMapping(method = RequestMethod.GET, path = "/remove/{id}")
     public String deleteHouse(@PathVariable Integer id) {
         //houseService.deleteHouse(id);
 
         return "redirect:/view/index.html";
-    }
-
-    @RequestMapping(method = RequestMethod.POST, path = "/add")
-    public String addHouse(@Valid @ModelAttribute("house") HouseDto houseDto, BindingResult result) {
-
-        //House house = houseAssembler.convertToRealHouse(houseDto, new House());
-        //houseService.saveOrUpdate(house);
-
-        return "index.html";
-    }
+    }*/
 
 }

@@ -10,36 +10,50 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="user.js"></script>
     <title>Register user</title>
+    <link rel="stylesheet" type="text/css" href="./add-user.css">
 </head>
 <body>
 
-<div class="text-center" style="padding-top: 40px">
-    <h2><b>Register new user</b></h2>
+<div class="bg">
+
+
+    <div class="container">
+        <div class="rect">
+            <div class="loginho">
+                <img src="./logoMIN.png" class="rounded mx-auto d-block" alt="...">
+            </div>
+            <div class="text-form">
+                <div class="text-center" style="padding-top: 40px">
+                    <h2 style="color: gray"><b>Register</b></h2>
+                </div>
+                <br>
+
+                <form class="ui form">
+                    <div class="field">
+                        <label>Name</label>
+                        <input id="name" type="text" name="name" placeholder="Name">
+                    </div>
+                    <div class="field">
+                        <label>E-mail</label>
+                        <input id="email" type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <label>Phone</label>
+                        <input id="phone" type="text" name="phone" placeholder="Phone">
+                    </div>
+
+                    <br>
+                    <div class="buttonZITO">
+                        <input class="btn-success" type="reset"
+                               style="background-color: #f48d8a; border-color: #f48d8a" type="Reset">
+                        <button id="btn" class="btn-success" type="submit"
+                                style="background-color: #86cfc6; border-color: #86cfc6">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="container">
-    <form class="ui form">
-        <div class="field">
-            <label>Name</label>
-            <input id="name" type="text" name="name" placeholder="Name">
-        </div>
-        <div class="field">
-            <label>E-mail</label>
-            <input id="email" type="text" name="email" placeholder="Email">
-        </div>
-        <div class="field">
-            <label>Phone</label>
-            <input id="phone" type="text" name="phone" placeholder="Phone">
-        </div>
-
-        <div class="password">
-            <label>Password</label>
-            <input id="password" type="password" name="password">
-        </div>
-    </form>
-    <button id="btn" class="btn-success" type="submit">Submit</button>
-    </form>
-</div>
-
 </body>
 </html>
