@@ -51,6 +51,12 @@ public class WebController {
         return "redirect:/view/house-view.html";
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/adduser")
+    public String addUser(Model model) {
+        //model.addAttribute("", houseService.list());
+        return "redirect:/view/add-user.html";
+    }
+
     @RequestMapping(method = RequestMethod.GET, path = "/remove/{id}")
     public String deleteHouse(@PathVariable Integer id) {
         //houseService.deleteHouse(id);
