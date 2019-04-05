@@ -18,8 +18,20 @@ body, html {
 .rect {
     background-color: aliceblue;
     opacity: 0.6;
+    margin: 90px 500px 50px 380px;
+    height: 480px;
+    width: 400px;
+    position: absolute;
 }
 
 .text-form{
-text-align: center;
+
+    text-align: center;
+
+}
+
+.loginho{
+
+    align-content: center;
+    margin-top: 50px;
 }
