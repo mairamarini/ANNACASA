@@ -10,8 +10,7 @@ import javax.persistence.PersistenceContext;
 @Component
 public class HouseDao extends AbstractJpaDao<House> {
 
- public HouseDao(){
-     super(House.class);
-
+    public HouseDao() {
+        super(House.class);
     }
 }

@@ -15,7 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 
-@CrossOrigin(value = "*")
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/house")
 public class RestHouseController {
