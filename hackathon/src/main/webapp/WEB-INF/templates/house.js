@@ -1,7 +1,7 @@
 window.onload = function () {
 
     if (!window.localStorage.getItem('userPhone')) {
-        window.location.replace('http://localhost:8080/rrr/house/login')
+        window.location.replace('http://localhost:8080/annacasa/house/login')
         return
     }
     var submitButton = document.getElementById('btn');
@@ -48,12 +48,12 @@ function addHouse() {
             console.log(house.work);
             window.localStorage.setItem('works', JSON.stringify(house.work));
             console.log(window.localStorage);
-            window.location.replace('http://localhost:8080/rrr/house/companies');
+            window.location.replace('http://localhost:8080/annacasa/house/companies');
         }
     };
 
     // start the AJAX request
-    ajax.open('POST', 'http://localhost:8080/rrr/api/house/', true);
+    ajax.open('POST', 'http://localhost:8080/annacasa/api/house/', true);
     ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send(JSON.stringify(house));
     event.preventDefault();

@@ -28,13 +28,13 @@ function addUser(event) {
 
         if (ajax.readyState === 4 && ajax.status === 201) {
             // what to do after creating
-            window.location.replace('http://localhost:8080/rrr/house/addhouse');
+            window.location.replace('http://localhost:8080/annacasa/house/addhouse');
 
         }
     };
     document.cookie = document.getElementById('phone').value;
     // start the AJAX request
-    ajax.open('POST', 'http://localhost:8080/rrr/api/user/', true);
+    ajax.open('POST', 'http://localhost:8080/annacasa/api/user/', true);
     ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send(house);
     event.preventDefault();

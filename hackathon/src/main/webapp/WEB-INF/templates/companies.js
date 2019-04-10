@@ -1,6 +1,6 @@
 window.onload = function () {
     if (!window.localStorage.getItem('userPhone')) {
-        window.location.replace('http://localhost:8080/rrr/house/login')
+        window.location.replace('http://localhost:8080/annacasa/house/login')
         return
     }
 
@@ -42,7 +42,7 @@ window.onload = function () {
     };
 
     // start the AJAX request
-    ajax.open('GET', 'http://localhost:8080/rrr/api/companies/', true);
+    ajax.open('GET', 'http://localhost:8080/annacasa/api/companies/', true);
     //ajax.setRequestHeader('Content-type', 'application/json');
     ajax.send();
 };
