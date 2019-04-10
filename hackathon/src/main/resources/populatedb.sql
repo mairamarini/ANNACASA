@@ -19,19 +19,19 @@ INSERT INTO work(id, workType) VALUES
 
 DELETE FROM company;
 INSERT INTO company(id, email, name, phone, work_id) VALUES
-  (1, 'macambi@macambi.com', 'Macambi - Madeiras, Carpintaria E Imóveis da Beira Interior', '275776010', 1),
-  (2, 'geral@carpintariamateus.com', 'Carpintaria Mateus, Ltda', '275961185', 1),
-  (3, '', 'D CORAÇÃO', '275771110', 2),
-  (4, '', 'Requinte Decoradora', '275771843', 2),
-  (5, '', 'Contruções José Ramos Gil Ltda', '275772254', 3),
-  (6, '', 'Henrique Candeias-contruções de Edifícios Lda', '215772844', 3),
-  (7, '', 'Solcelsius Ltda', '961641672', 4),
-  (8, '', 'Marques Instalações Ltda', '933825905', 4),
-  (9, '', 'Jogri-Instalações Eléctricas Unipessoal Lda', '9275107139', 5),
-  (10, '', 'Energias Primo Lda', '275773200', 5),
-  (11, '', 'Limpezas Silvestre Lda', '275662222', 6),
-  (12, '', 'Fundalum-serralheria De Alumínios Lda', '275752880', 7),
-  (13, '', 'Inoxcasa-construções Decorativa em Inox Lda', '275773687', 7);
+  (1, 'madeiras&carpintaria@gmail.com', 'Madeiras && Carpintaria', '321654987', 1),
+  (2, 'carpintariaaaaa@gmail.com', 'Carpintaria AAAA', '987654321', 1),
+  (3, 'de_coracao@gmail.com', 'DeCoração', '789456123', 2),
+  (4, 'de_coradora@gmail.com', 'De Decoradora', '896745231', 2),
+  (5, 'constru@gmail.com', 'Contruções Constru', '907856342', 3),
+  (6, 'riquito_construcoes@gmail.com', 'Riquito Construções', '292929345', 3),
+  (7, 'solar_sol@gmail.com', 'Solar Sol', '963909090', 4),
+  (8, 'install_mm@gmail.com', 'Instalações MM', '919028787', 4),
+  (9, 'instalacoes.eletricasss@gmail.com', 'Instalações Eletricas SS', '912345678', 5),
+  (10, 'energias.fundao@gmail.com', 'Energias Fundão', '981234756', 5),
+  (11, 'limpeza.as@gmail.com', 'Limpeza AS', '789612345', 6),
+  (12, 'serralheria_rm@gmail.com', 'Serralheria RM', '890567234', 7),
+  (13, 'serralheria.hs', 'Serralheria HS', '777888123', 7);
 
 
 DELETE FROM work_house;
