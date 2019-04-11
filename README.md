@@ -2,11 +2,11 @@
 
 Hackathon project developed @ <Academia de Código_>
 
-Created by the awesome Code Cadets: <br>
-Ana Sílvia Gonçalves <br> 
-Henrique Saraiva <br>
-Maíra Marini <br>
-Rosa Maria Oliveira <br>
+<b>Created by the awesome Code Cadets:</b> <br>
+<a href="https://github.com/anasilviapg89">Ana Sílvia Gonçalves </a><br> 
+<a href="https://github.com/hsaraiva9">Henrique Saraiva</a> <br>
+<a href="https://github.com/mairamarini">Maíra Marini </a> <br>
+<a href="https://github.com/RosamariaOliveira">Rosa Maria Oliveira </a><br>
 
 This webapp was developed in under 24 hours after 13 weeks of bootcamp.
 
